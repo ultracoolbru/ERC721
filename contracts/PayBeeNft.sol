@@ -1,19 +1,20 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "@openzeppelin/contracts@4.7.3/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts@4.7.3/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts@4.7.3/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts@4.7.3/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract PayBee is ERC721, ERC721Enumerable, ERC721URIStorage {
+contract PayBeeNft is ERC721, ERC721Enumerable, ERC721URIStorage {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
+
     uint256 MAX_SUPPLY = 10000;
     mapping (address => uint) totalNumberOfNftAllowedToMint;
 
-    constructor() ERC721("PayBee", "PBNFT") {}
+    constructor() ERC721("PayBeeNft", "PBNFT") {}
 
     function safeMint(address to, string memory uri) public {
         uint256 tokenId = _tokenIdCounter.current();
@@ -26,11 +27,11 @@ contract PayBee is ERC721, ERC721Enumerable, ERC721URIStorage {
 
     // The following functions are overrides required by Solidity.
 
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId)
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
         internal
         override(ERC721, ERC721Enumerable)
     {
-        super._beforeTokenTransfer(from, to, tokenId);
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
 
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {

@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# Week 1 - Road to Web 3
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Successful deployment of NFT to Goerli testnet: https://goerli.etherscan.io/address/0xad0913f3608627033ea1320dfb90864968da4b25
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Successful mint of my NFT on OpenSea: https://testnets.opensea.io/assets/goerli/0xad0913f3608627033ea1320dfb90864968da4b25/4

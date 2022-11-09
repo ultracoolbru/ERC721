@@ -1,4 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
+const dotenv = require("dotenv");
+dotenv.config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -10,16 +12,6 @@ module.exports = {
     artifacts: "./artifacts",
   },
   networks: {
-    hardhat: {
-      chainId: 1337,
-      accounts: {
-        count: 10,
-        initialIndex: 0,
-        mnemonic: "test test test test test test test test test test test junk",
-        path: "m/44'/60'/0'/0",
-        accountsBalance: "1000000000000000000000000",
-      },
-    },
     hardhat: {
       goerli: {
         url: process.env.ALCHEMY_GOERLI_URL,

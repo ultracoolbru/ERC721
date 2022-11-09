@@ -7,10 +7,10 @@
 const hre = require("hardhat");
 
 async function main() {
-  const PayBee = await hre.ethers.getContractFactory("PayBee");
-  const payBee = await PayBee.deploy();
-  await payBee.deployed();
-  console.log("PBT Token deployed to:", pbtToken.address);
+  const PayBeeNft = await hre.ethers.getContractFactory("PayBeeNft");
+  const payBeeNft = await PayBeeNft.deploy();
+  await payBeeNft.deployed();
+  console.log("PBNFT Token deployed to:", payBeeNft.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
