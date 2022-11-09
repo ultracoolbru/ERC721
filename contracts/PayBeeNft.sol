@@ -10,7 +10,7 @@ contract PayBee is ERC721, ERC721Enumerable, ERC721URIStorage {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
-    uni256 MAX_SUPPLY = 10000;
+    uint256 MAX_SUPPLY = 10000;
     mapping (address => uint) totalNumberOfNftAllowedToMint;
 
     constructor() ERC721("PayBee", "PBNFT") {}

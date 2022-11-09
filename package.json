@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "paybee-demo-nft",
   "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.",
   "version": "1.0.0",
   "main": "hardhat.config.js",
@@ -14,13 +14,19 @@
     "url": "git+https://github.com/ultracoolbru/ERC721.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Edward Whitehead",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ultracoolbru/ERC721/issues"
   },
   "homepage": "https://github.com/ultracoolbru/ERC721#readme",
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "ethers": "^5.7.2",
     "hardhat": "^2.12.2"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@openzeppelin/contracts": "^4.8.0"
   }
 }
